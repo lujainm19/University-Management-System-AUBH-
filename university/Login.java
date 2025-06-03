@@ -6,8 +6,10 @@ public class Login  extends JFrame{
     Login () {
 
         getContentPane().setBackground(Color.WHITE);
+        setLayout(null);
 
         JLabel lblusername = new JLabel("Username: ");
+        lblusername.setBounds(40, 20, 100, 20);
         add(lblusername);
 
         setSize(600, 300);
