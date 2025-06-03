@@ -16,6 +16,14 @@ public class Login  extends JFrame{
         tfusername.setBounds(150, 20, 150,20);
         add(tfusername);
 
+        JLabel lblpassword = new JLabel("Password: ");
+        lblpassword.setBounds(40, 70, 100, 20);
+        add(lblpassword);
+
+        JTextField tfpassword = new JTextField();
+        tfpassword.setBounds(150, 70, 150, 20);
+        add(tfpassword);
+
         setSize(600, 300);
         setLocation(700, 350);
         setVisible(true);
