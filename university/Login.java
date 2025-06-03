@@ -12,6 +12,10 @@ public class Login  extends JFrame{
         lblusername.setBounds(40, 20, 100, 20);
         add(lblusername);
 
+        JTextField tfusername = new JTextField();
+        tfusername.setBounds(150, 20, 150,20);
+        add(tfusername);
+
         setSize(600, 300);
         setLocation(700, 350);
         setVisible(true);
