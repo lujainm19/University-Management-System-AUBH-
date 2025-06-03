@@ -15,6 +15,7 @@ public class Splash extends JFrame implements Runnable{
 		add(image);
 
         t = new Thread(this);
+        t.start();//the start method internally calls the run method 
 
         //the screen is not visible so add this to make it visible
 		setVisible(true);
@@ -28,7 +29,16 @@ public class Splash extends JFrame implements Runnable{
 		}
     }
 
-    public void run() {}
+    public void run() {
+        try {
+			Thread.sleep(7000);
+			setVisible(false);
+			
+			//next frame
+		}catch (Exception e) {
+			
+		}
+    }
 
     public static void main(String[] args) {
         new Splash();
