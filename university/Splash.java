@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 //to create a frame screen
-public class Splash extends JFrame{
-
+public class Splash extends JFrame implements Runnable{
+    Thread t;
     Splash(){
         
         //to add a picture to background of frame create object of it and add 
@@ -13,6 +13,8 @@ public class Splash extends JFrame{
 		ImageIcon i3 = new ImageIcon(i2);
 		JLabel image = new JLabel(i3);
 		add(image);
+
+        t = new Thread(this);
 
         //the screen is not visible so add this to make it visible
 		setVisible(true);
@@ -25,6 +27,8 @@ public class Splash extends JFrame{
 			setSize(2*i, i+200);
 		}
     }
+
+    public void run() {}
 
     public static void main(String[] args) {
         new Splash();
