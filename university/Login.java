@@ -25,6 +25,11 @@ public class Login  extends JFrame{
         add(tfpassword);
 
         JButton Login = new JButton("Login");
+        Login.setBounds(40, 140, 120, 30);
+        Login.setBackground(Color.BLACK);
+        Login.setForeground(Color.WHITE);
+        Login.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(Login);
 
         setSize(600, 300);
         setLocation(700, 350);
