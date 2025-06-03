@@ -31,6 +31,13 @@ public class Login  extends JFrame{
         Login.setFont(new Font("Tahoma", Font.BOLD, 15));
         add(Login);
 
+        JButton Cancel = new JButton("Cancel");
+        Cancel.setBounds(180, 140, 120, 30);
+        Cancel.setBackground(Color.BLACK);
+        Cancel.setForeground(Color.WHITE);
+        Cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(Cancel);
+
         setSize(600, 300);
         setLocation(700, 350);
         setVisible(true);
