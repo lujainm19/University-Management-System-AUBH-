@@ -7,6 +7,9 @@ public class Login  extends JFrame{
 
         getContentPane().setBackground(Color.WHITE);
 
+        JLabel lblusername = new JLabel("Username: ");
+        add(lblusername);
+
         setSize(600, 300);
         setLocation(700, 350);
         setVisible(true);
