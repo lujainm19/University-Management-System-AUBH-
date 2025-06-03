@@ -24,6 +24,8 @@ public class Login  extends JFrame{
         tfpassword.setBounds(150, 70, 150, 20);
         add(tfpassword);
 
+        JButton Login = new JButton("Login");
+
         setSize(600, 300);
         setLocation(700, 350);
         setVisible(true);
