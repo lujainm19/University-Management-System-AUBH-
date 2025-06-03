@@ -20,7 +20,7 @@ public class Login  extends JFrame{
         lblpassword.setBounds(40, 70, 100, 20);
         add(lblpassword);
 
-        JTextField tfpassword = new JTextField();
+        JPasswordField tfpassword = new JPasswordField();
         tfpassword.setBounds(150, 70, 150, 20);
         add(tfpassword);
 
