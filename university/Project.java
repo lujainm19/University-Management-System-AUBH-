@@ -126,6 +126,7 @@ public class Project extends JFrame implements ActionListener{
 
         JMenuItem ex = new JMenuItem("Exit");
         ex.setBackground(Color.WHITE);
+        ex.addActionListener(this);;
         exit.add(ex);
 
 
@@ -137,7 +138,9 @@ public class Project extends JFrame implements ActionListener{
     }
 
     @Override
-    public void actionPerformed(ActionEvent ae) {}
+    public void actionPerformed(ActionEvent ae) {
+        setVisible(false);
+    }
 
     public static void main(String[] args){
         new Project();
