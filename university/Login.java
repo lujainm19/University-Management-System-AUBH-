@@ -53,14 +53,19 @@ public class Login  extends JFrame implements ActionListener{
         setVisible(true);
     }
 
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == Login) {
+
+        } else if (ae.getSource() == Cancel) {
+            
+        }
+       
+    }
+
 
     public static void main(String[] args) {
         new Login();
     }
 
-
-    @Override
-    public void actionPerformed(ActionEvent ae) {
-       
-    }
 }
