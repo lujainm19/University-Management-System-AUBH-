@@ -126,6 +126,7 @@ public class Project extends JFrame implements ActionListener{
 
         JMenuItem ex = new JMenuItem("Exit");
         ex.setBackground(Color.WHITE);
+        //to call actionPerformed method when clicked on exit to then close the frame
         ex.addActionListener(this);;
         exit.add(ex);
 
