@@ -44,6 +44,90 @@ public class Project extends JFrame{
         JMenuItem studentdetails = new JMenuItem("View Student Information");
         studentdetails.setBackground(Color.WHITE);
         details.add(studentdetails);
+        
+
+
+        //Leave
+        JMenu leave  = new JMenu("Apply Leave");
+        leave.setForeground(Color.BLUE);
+        mb.add(leave);
+
+        JMenuItem facultyleave = new JMenuItem("Faculty Leave");
+        facultyleave.setBackground(Color.WHITE);
+        leave.add(facultyleave);
+
+        JMenuItem studentleave = new JMenuItem("Student Leave");
+        studentleave.setBackground(Color.WHITE);
+        leave.add(studentleave);
+
+
+        //Leave Details
+        JMenu leaveDetails  = new JMenu("Leave Details");
+        leaveDetails.setForeground(Color.BLUE);
+        mb.add(leaveDetails);
+
+        JMenuItem facultyleavedetails = new JMenuItem("Faculty Leave Details");
+        facultyleavedetails.setBackground(Color.WHITE);
+        leaveDetails.add(facultyleavedetails);
+
+        JMenuItem studentleavedetails = new JMenuItem("Student Leave Details");
+        studentleavedetails.setBackground(Color.WHITE);
+        leaveDetails.add(studentleavedetails);
+
+
+        //Examination
+        JMenu exam  = new JMenu("Examination");
+        exam.setForeground(Color.BLUE);
+        mb.add(exam);
+
+        JMenuItem examinationdetails = new JMenuItem("Examination Results");
+        examinationdetails.setBackground(Color.WHITE);
+        exam.add(examinationdetails);
+
+        JMenuItem entermarks = new JMenuItem("Enter Marks");
+        entermarks.setBackground(Color.WHITE);
+        exam.add(entermarks);
+
+
+        //Update Details
+        JMenu updateInfo  = new JMenu("Update Details");
+        updateInfo.setForeground(Color.BLUE);
+        mb.add(updateInfo);
+
+        JMenuItem updatefacultyinfo = new JMenuItem("Update Faculty Details");
+        updatefacultyinfo.setBackground(Color.WHITE);
+        updateInfo.add(updatefacultyinfo);
+
+        JMenuItem updatestudentinfo = new JMenuItem("Update Student Details");
+        updatestudentinfo.setBackground(Color.WHITE);
+        updateInfo.add(updatestudentinfo);
+
+
+
+        //Fee
+        JMenu fee  = new JMenu("Fee Details");
+        fee.setForeground(Color.BLUE);
+        mb.add(fee);
+
+        JMenuItem feestructure = new JMenuItem("Student Fee Structure");
+        feestructure.setBackground(Color.WHITE);
+        fee.add(feestructure);
+
+        JMenuItem feeform = new JMenuItem("Student Fee Form");
+        feeform.setBackground(Color.WHITE);
+        fee.add(feeform);
+
+
+        //Exit to exit project
+        JMenu exit  = new JMenu("Exit");
+        exit.setForeground(Color.BLUE);
+        mb.add(exit);
+
+        JMenuItem ex = new JMenuItem("Exit");
+        ex.setBackground(Color.WHITE);
+        exit.add(ex);
+
+
 
         setJMenuBar(mb);
 
