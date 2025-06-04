@@ -38,6 +38,13 @@ public class Login  extends JFrame{
         Cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
         add(Cancel);
 
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/second.jpg"));
+		Image i2 = i1.getImage().getScaledInstance(200, 200, Image.SCALE_DEFAULT);
+		ImageIcon i3 = new ImageIcon(i2);
+		JLabel image = new JLabel(i3);
+        image.setBounds(350, 0, 200, 200);
+		add(image);
+
         setSize(600, 300);
         setLocation(700, 350);
         setVisible(true);
