@@ -29,6 +29,7 @@ public class Login  extends JFrame implements ActionListener{
         Login.setBounds(40, 140, 120, 30);
         Login.setBackground(Color.BLACK);
         Login.setForeground(Color.WHITE);
+        Login.addActionListener((this));
         Login.setFont(new Font("Tahoma", Font.BOLD, 15));
         add(Login);
 
@@ -36,6 +37,7 @@ public class Login  extends JFrame implements ActionListener{
         Cancel.setBounds(180, 140, 120, 30);
         Cancel.setBackground(Color.BLACK);
         Cancel.setForeground(Color.WHITE);
+        Cancel.addActionListener((this));
         Cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
         add(Cancel);
 
