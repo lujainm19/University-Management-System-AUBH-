@@ -27,8 +27,23 @@ public class Project extends JFrame{
 
         //to add New Student Information under New Information
         JMenuItem studentInfo = new JMenuItem("New Student Information");
-        facultyInfo.setBackground(Color.WHITE);
+        studentInfo.setBackground(Color.WHITE);
         newInformation.add(studentInfo);
+
+
+
+        //Details
+        JMenu details  = new JMenu("View Details");
+        details.setForeground(Color.BLUE);
+        mb.add(details);
+
+        JMenuItem facultydetails = new JMenuItem("View Faculty Information");
+        facultydetails.setBackground(Color.WHITE);
+        details.add(facultydetails);
+
+        JMenuItem studentdetails = new JMenuItem("View Student Information");
+        studentdetails.setBackground(Color.WHITE);
+        details.add(studentdetails);
 
         setJMenuBar(mb);
 
