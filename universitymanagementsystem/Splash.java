@@ -1,3 +1,5 @@
+package src.universitymanagementsystem;
+
 import javax.swing.*;
 import java.awt.*;
 

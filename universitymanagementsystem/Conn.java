@@ -1,3 +1,5 @@
+package src.universitymanagementsystem;
+
 public class Conn {
 
     Conn() {
