@@ -12,6 +12,9 @@ public class Project extends JFrame{
 		JLabel image = new JLabel(i3);
 		add(image);
 
+        JMenuBar mb = new JMenuBar();
+        setJMenuBar(mb);
+
         setVisible(true);
 
     }
