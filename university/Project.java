@@ -12,7 +12,13 @@ public class Project extends JFrame{
 		JLabel image = new JLabel(i3);
 		add(image);
 
+        //to add a menu bar
         JMenuBar mb = new JMenuBar();
+
+        //to add New Information heading on the menu Bar
+        JMenu newInformation = new JMenu("New Information");
+        mb.add(newInformation);
+        
         setJMenuBar(mb);
 
         setVisible(true);
