@@ -22,6 +22,7 @@ public class Project extends JFrame{
 
         //to add Menu Items under heading on menu bar
         JMenuItem facultyInfo = new JMenuItem("New Faculty Information");
+        facultyInfo.setBackground(Color.WHITE);
         newInformation.add(facultyInfo);
 
         setJMenuBar(mb);
