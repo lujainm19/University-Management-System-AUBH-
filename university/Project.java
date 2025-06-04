@@ -17,8 +17,9 @@ public class Project extends JFrame{
 
         //to add New Information heading on the menu Bar
         JMenu newInformation = new JMenu("New Information");
+        newInformation.setForeground(Color.BLUE);
         mb.add(newInformation);
-        
+
         setJMenuBar(mb);
 
         setVisible(true);
