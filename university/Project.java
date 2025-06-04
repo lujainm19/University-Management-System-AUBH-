@@ -1,7 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class Project extends JFrame{
+public class Project extends JFrame implements ActionListener{
 
     Project() {
         setSize(1925,1050);
@@ -134,6 +135,9 @@ public class Project extends JFrame{
         setVisible(true);
 
     }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {}
 
     public static void main(String[] args){
         new Project();
