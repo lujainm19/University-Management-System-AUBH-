@@ -4,6 +4,7 @@ import java.awt.event.*;
 
 public class Login  extends JFrame implements ActionListener{
 
+    JButton Login, Cancel;
     Login () {
 
         getContentPane().setBackground(Color.WHITE);
@@ -25,7 +26,7 @@ public class Login  extends JFrame implements ActionListener{
         tfpassword.setBounds(150, 70, 150, 20);
         add(tfpassword);
 
-        JButton Login = new JButton("Login");
+        Login = new JButton("Login");
         Login.setBounds(40, 140, 120, 30);
         Login.setBackground(Color.BLACK);
         Login.setForeground(Color.WHITE);
@@ -33,7 +34,7 @@ public class Login  extends JFrame implements ActionListener{
         Login.setFont(new Font("Tahoma", Font.BOLD, 15));
         add(Login);
 
-        JButton Cancel = new JButton("Cancel");
+        Cancel = new JButton("Cancel");
         Cancel.setBounds(180, 140, 120, 30);
         Cancel.setBackground(Color.BLACK);
         Cancel.setForeground(Color.WHITE);
@@ -58,7 +59,7 @@ public class Login  extends JFrame implements ActionListener{
         if (ae.getSource() == Login) {
 
         } else if (ae.getSource() == Cancel) {
-            
+            setVisible(false);
         }
        
     }
