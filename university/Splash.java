@@ -7,9 +7,9 @@ public class Splash extends JFrame implements Runnable{
     Splash(){
         
         //to add a picture to background of frame create object of it and add 
-		ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/aubh.jpg"));
+		ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/project.png"));
         //to scale the image properly on the frame
-		Image i2 = i1.getImage().getScaledInstance(1500, 650, Image.SCALE_DEFAULT);
+		Image i2 = i1.getImage().getScaledInstance(1000, 675, Image.SCALE_DEFAULT);
 		ImageIcon i3 = new ImageIcon(i2);
 		JLabel image = new JLabel(i3);
 		add(image);
