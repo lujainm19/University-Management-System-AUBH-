@@ -7,6 +7,8 @@ import java.awt.event.*;
 public class Login  extends JFrame implements ActionListener{
 
     JButton Login, Cancel;
+    JTextField tfusername, tfpassword;
+
     Login () {
 
         getContentPane().setBackground(Color.WHITE);
@@ -16,7 +18,7 @@ public class Login  extends JFrame implements ActionListener{
         lblusername.setBounds(40, 20, 100, 20);
         add(lblusername);
 
-        JTextField tfusername = new JTextField();
+        tfusername = new JTextField();
         tfusername.setBounds(150, 20, 150,20);
         add(tfusername);
 
@@ -24,7 +26,7 @@ public class Login  extends JFrame implements ActionListener{
         lblpassword.setBounds(40, 70, 100, 20);
         add(lblpassword);
 
-        JPasswordField tfpassword = new JPasswordField();
+        tfpassword = new JPasswordField();
         tfpassword.setBounds(150, 70, 150, 20);
         add(tfpassword);
 
@@ -59,6 +61,8 @@ public class Login  extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == Login) {
+            String username = tfusername.getText();
+            String password = tfpassword.getText();
 
         } else if (ae.getSource() == Cancel) {
             setVisible(false);
