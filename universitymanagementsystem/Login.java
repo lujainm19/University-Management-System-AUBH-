@@ -64,6 +64,8 @@ public class Login  extends JFrame implements ActionListener{
             String username = tfusername.getText();
             String password = tfpassword.getText();
 
+            //checks if a user's username and password exist in the login table of the database.
+            String query = "select * from login where username='"+username+"' and password='"+password+"'";
         } else if (ae.getSource() == Cancel) {
             setVisible(false);
         }
