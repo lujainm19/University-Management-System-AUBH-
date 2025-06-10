@@ -66,6 +66,16 @@ public class Login  extends JFrame implements ActionListener{
 
             //checks if a user's username and password exist in the login table of the database.
             String query = "select * from login where username='"+username+"' and password='"+password+"'";
+        
+             //Mysql is an excel entity query so chances of error so error handling
+            try {
+                Conn c = new Conn();
+                c.s.executeQuery(query);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        
         } else if (ae.getSource() == Cancel) {
             setVisible(false);
         }
