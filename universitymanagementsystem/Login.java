@@ -3,6 +3,7 @@ package universitymanagementsystem;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.*;
 
 public class Login  extends JFrame implements ActionListener{
 
@@ -70,7 +71,7 @@ public class Login  extends JFrame implements ActionListener{
              //Mysql is an excel entity query so chances of error so error handling
             try {
                 Conn c = new Conn();
-                c.s.executeQuery(query);
+                ResultSet  rs = c.s.executeQuery(query);
 
             } catch (Exception e) {
                 e.printStackTrace();
