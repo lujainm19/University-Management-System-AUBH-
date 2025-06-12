@@ -6,7 +6,7 @@ import javax.swing.*;
 //to create a frame
 public class AddStudent extends JFrame{
 
-    JTextField tfname, tffname, tfId;
+    JTextField tfname, tffname, tfId, tfphone;
 
     AddStudent(){
         //frame size, location and visibility
@@ -50,6 +50,16 @@ public class AddStudent extends JFrame{
         tfId = new JTextField();
         tfId.setBounds(200, 200, 150, 30);
         add(tfId);
+
+        //Phone No. : heading
+        JLabel lblphone = new JLabel("Phone No. :");
+        lblphone.setBounds(400, 200, 200, 30);
+        lblphone.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblphone);
+
+        tfphone = new JTextField();
+        tfphone.setBounds(600, 200, 150, 30);
+        add(tfphone);
 
         setVisible(true);
 
