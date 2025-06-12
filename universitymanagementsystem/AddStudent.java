@@ -17,6 +17,11 @@ public class AddStudent extends JFrame{
         heading.setBounds(310, 30, 500, 50);
         heading.setFont(new Font("serif", Font.BOLD, 30));
         add(heading);
+        
+        JLabel lblname = new JLabel("Name:");
+        lblname.setBounds(50, 150, 100, 30);
+        lblname.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblname);
 
         setVisible(true);
 
