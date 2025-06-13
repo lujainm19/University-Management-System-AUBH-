@@ -80,7 +80,14 @@ public class AddStudent extends JFrame{
         tfnationality = new JTextField();
         tfnationality.setBounds(600, 250, 150, 30);
         add(tfnationality);
+        
+        //Gender: heading
+        JLabel lblgender = new JLabel("Gender:");
+        lblgender.setBounds(50, 300, 200, 30);
+        lblgender.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblgender);
 
+        
 
         setVisible(true);
 
