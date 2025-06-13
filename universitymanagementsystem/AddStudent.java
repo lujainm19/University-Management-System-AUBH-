@@ -1,4 +1,5 @@
 package universitymanagementsystem;
+import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.*;
@@ -91,6 +92,7 @@ public class AddStudent extends JFrame{
         String gen[] = {"Male", "Female", "Prefer not to say"};
         gender = new JComboBox<>(gen);
         gender.setBounds(200, 300, 150, 30);
+        gender.setBackground(Color.WHITE);
         add(gender);
 
         setVisible(true);
