@@ -7,6 +7,7 @@ import javax.swing.*;
 public class AddStudent extends JFrame{
 
     JTextField tfname, tffname, tfId, tfphone, tfemail, tfnationality;
+    JComboBox<String> gender;
 
     AddStudent(){
         //frame size, location and visibility
@@ -87,7 +88,9 @@ public class AddStudent extends JFrame{
         lblgender.setFont(new Font("serif", Font.BOLD, 20));
         add(lblgender);
 
-        
+        gender = new JComboBox<>();
+        gender.setBounds(200, 300, 150, 30);
+        add(gender);
 
         setVisible(true);
 
