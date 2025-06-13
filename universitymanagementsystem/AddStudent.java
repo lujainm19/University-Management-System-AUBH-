@@ -88,7 +88,8 @@ public class AddStudent extends JFrame{
         lblgender.setFont(new Font("serif", Font.BOLD, 20));
         add(lblgender);
 
-        gender = new JComboBox<>();
+        String gen[] = {"Male", "Female", "Prefer not to say"};
+        gender = new JComboBox<>(gen);
         gender.setBounds(200, 300, 150, 30);
         add(gender);
 
