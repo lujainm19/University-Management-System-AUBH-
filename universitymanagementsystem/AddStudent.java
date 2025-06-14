@@ -9,6 +9,7 @@ public class AddStudent extends JFrame{
 
     JTextField tfname, tffname, tfId, tfphone, tfemail, tfnationality;
     JComboBox<String> gender, type, college, enrollment, major, semester;
+    JButton submit;
 
     AddStudent(){
         //frame size, location and visibility
@@ -154,6 +155,15 @@ public class AddStudent extends JFrame{
         semester.setBounds(600, 400, 150, 30);
         semester.setBackground(Color.WHITE);
         add(semester);
+
+        submit = new JButton("Submit");
+        submit.setBounds(250,550,120,30);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
 
 
         setVisible(true);
