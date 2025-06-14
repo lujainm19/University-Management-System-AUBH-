@@ -8,7 +8,7 @@ import javax.swing.*;
 public class AddStudent extends JFrame{
 
     JTextField tfname, tffname, tfId, tfphone, tfemail, tfnationality;
-    JComboBox<String> gender, type, college;
+    JComboBox<String> gender, type, college, enrollment;
 
     AddStudent(){
         //frame size, location and visibility
@@ -118,6 +118,19 @@ public class AddStudent extends JFrame{
         college.setBounds(200, 350, 150, 30);
         college.setBackground(Color.WHITE);
         add(college);
+
+        //Enrollmenent Status: heading
+        JLabel lblenrollment = new JLabel("Enrollmenent Status:");
+        lblenrollment.setBounds(400, 350, 200, 30);
+        lblenrollment.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblenrollment);
+
+        String enr[] = {"Full-time", "Part-time"};
+        enrollment = new JComboBox<>(enr);
+        enrollment.setBounds(600, 350, 150, 30);
+        enrollment.setBackground(Color.WHITE);
+        add(enrollment);
+
 
 
         setVisible(true);
