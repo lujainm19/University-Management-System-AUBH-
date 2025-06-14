@@ -3,9 +3,10 @@ import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.*;
+import java.awt.event.*;
 
 //to create a frame
-public class AddStudent extends JFrame{
+public class AddStudent extends JFrame implements ActionListener{
 
     JTextField tfname, tffname, tfId, tfphone, tfemail, tfnationality;
     JComboBox<String> gender, type, college, enrollment, major, semester;
@@ -175,8 +176,11 @@ public class AddStudent extends JFrame{
 
 
         setVisible(true);
-
     }
+
+        @Override
+    public void actionPerformed(ActionEvent ae) {}
+
 
     public static void main(String[] args) {
         new AddStudent();
