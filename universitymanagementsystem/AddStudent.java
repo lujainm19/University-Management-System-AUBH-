@@ -195,6 +195,21 @@ public class AddStudent extends JFrame implements ActionListener{
             String maj = (String) major.getSelectedItem();
             String sem = (String) semester.getSelectedItem();
 
+            //cuz mysql is an external entity
+            try {
+            // Build the query string
+            String query = "insert into student values('" + name + "','" + fname + "','" + stdID + "','" + phone + "','" + email + "','" + nationality + "','" + gen + "','" + tp + "','" + col + "','" + enr + "','" + maj + "','" + sem + "')";
+
+            Conn con = new Conn();
+            con.s.executeUpdate(query);
+
+            JOptionPane.showMessageDialog(null, "Student Details Inserted Successfully");
+            setVisible(false);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         } else {
             setVisible(false);
         }
