@@ -182,6 +182,18 @@ public class AddStudent extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         //to eturn the exact component
         if (ae.getSource() == submit ) {
+            String name = tfname.getText();
+            String fname = tffname.getText();
+            String stdID = tfId.getText();
+            String phone = tfphone.getText();
+            String email = tfemail.getText();
+            String nationality = tfnationality.getText();
+            String gen = (String) gender.getSelectedItem();
+            String tp = (String) type.getSelectedItem();
+            String col = (String) college.getSelectedItem();
+            String enr = (String) enrollment.getSelectedItem();
+            String maj = (String) major.getSelectedItem();
+            String sem = (String) semester.getSelectedItem();
 
         } else {
             setVisible(false);
