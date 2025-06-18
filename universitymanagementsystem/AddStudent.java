@@ -179,7 +179,14 @@ public class AddStudent extends JFrame implements ActionListener{
     }
 
         @Override
-    public void actionPerformed(ActionEvent ae) {}
+    public void actionPerformed(ActionEvent ae) {
+        //to eturn the exact component
+        if (ae.getSource() == submit ) {
+
+        } else {
+            setVisible(false);
+        }
+    }
 
 
     public static void main(String[] args) {
