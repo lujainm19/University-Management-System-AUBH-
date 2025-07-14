@@ -26,11 +26,13 @@ public class Project extends JFrame implements ActionListener{
         //to add Menu Items under heading on menu bar
         JMenuItem facultyInfo = new JMenuItem("New Faculty Information");
         facultyInfo.setBackground(Color.WHITE);
+        facultyInfo.addActionListener(this);
         newInformation.add(facultyInfo);
 
         //to add New Student Information under New Information
         JMenuItem studentInfo = new JMenuItem("New Student Information");
         studentInfo.setBackground(Color.WHITE);
+        studentInfo.addActionListener(this);
         newInformation.add(studentInfo);
 
 
@@ -142,7 +144,15 @@ public class Project extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
+     String msg = ae.getActionCommand();
+
+    if (msg.equals("Exit")) {
         setVisible(false);
+    } else if (msg.equals("New Faculty Information")) {
+        new AddTeacher();  
+    } else if (msg.equals("New Student Information")) {
+        new AddStudent();
+        }
     }
 
     public static void main(String[] args){
