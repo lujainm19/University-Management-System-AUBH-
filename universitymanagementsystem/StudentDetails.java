@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class StudentDetails extends JFrame{
+
+    Choice cstdIDno;
+
     StudentDetails(){
 
         getContentPane().setBackground(Color.WHITE);
@@ -12,6 +15,11 @@ public class StudentDetails extends JFrame{
         JLabel heading = new JLabel("Search by Student ID");
         heading.setBounds(20, 20, 150, 20);
         add(heading);
+
+        cstdIDno = new Choice();
+        cstdIDno.setBounds(180, 20, 150, 20);
+        add(cstdIDno);
+
         
         setSize(1000,700);
         setLocation(450,150);
