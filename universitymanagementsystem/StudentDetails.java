@@ -2,6 +2,7 @@ package universitymanagementsystem;
 
 import javax.swing.*;
 import java.awt.*;
+import java.sql.*;
 
 public class StudentDetails extends JFrame{
 
@@ -22,6 +23,7 @@ public class StudentDetails extends JFrame{
 
         try {
             Conn c = new Conn();
+            ResultSet rs = c.s.executeQuery("select * from student");
         } catch (Exception e) {
             e.printStackTrace();
         }
