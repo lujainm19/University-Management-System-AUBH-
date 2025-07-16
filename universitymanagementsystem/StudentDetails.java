@@ -7,6 +7,7 @@ import java.sql.*;
 public class StudentDetails extends JFrame{
 
     Choice cstdIDno;
+    JTable table;
 
     StudentDetails(){
 
@@ -30,6 +31,14 @@ public class StudentDetails extends JFrame{
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        //table
+        table = new JTable();
+
+        //Scrollbar on table
+        JScrollPane jsp = new JScrollPane(table);
+        jsp.setBounds(0, 100, 1000, 600);
+        add(jsp);
 
         
         setSize(1000,700);
