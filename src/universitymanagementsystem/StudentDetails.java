@@ -3,6 +3,7 @@ package universitymanagementsystem;
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
+import net.proteanit.sql.DbUtils;
 
 public class StudentDetails extends JFrame{
 
@@ -34,6 +35,15 @@ public class StudentDetails extends JFrame{
 
         //table
         table = new JTable();
+
+        try {
+            Conn c = new Conn();
+            ResultSet rs = c.s.executeQuery("select * from student");
+            //resultSetToTableModel function used to convert ResultSet from SQL into a TableModel 
+            table.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         //Scrollbar on table
         JScrollPane jsp = new JScrollPane(table);
