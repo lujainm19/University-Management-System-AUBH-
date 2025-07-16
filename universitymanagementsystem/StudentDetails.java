@@ -20,6 +20,12 @@ public class StudentDetails extends JFrame{
         cstdIDno.setBounds(180, 20, 150, 20);
         add(cstdIDno);
 
+        try {
+            Conn c = new Conn();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         
         setSize(1000,700);
         setLocation(450,150);
