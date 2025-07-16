@@ -24,6 +24,9 @@ public class StudentDetails extends JFrame{
         try {
             Conn c = new Conn();
             ResultSet rs = c.s.executeQuery("select * from student");
+            while (rs.next()) {
+                cstdIDno.add(rs.getString("stdID"));
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
