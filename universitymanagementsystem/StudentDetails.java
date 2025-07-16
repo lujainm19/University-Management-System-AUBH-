@@ -1,7 +1,5 @@
 package universitymanagementsystem;
 
-import java.awt.Color;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -10,6 +8,10 @@ public class StudentDetails extends JFrame{
 
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
+
+        JLabel heading = new JLabel("Search by Student ID");
+        heading.setBounds(20, 20, 150, 20);
+        add(heading);
         
         setSize(1000,700);
         setLocation(450,150);
