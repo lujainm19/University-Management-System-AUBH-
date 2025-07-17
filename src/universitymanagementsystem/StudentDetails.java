@@ -9,6 +9,7 @@ public class StudentDetails extends JFrame{
 
     Choice cstdIDno;
     JTable table;
+    JButton search, print, update, add, cancel;
 
     StudentDetails(){
 
@@ -49,6 +50,31 @@ public class StudentDetails extends JFrame{
         JScrollPane jsp = new JScrollPane(table);
         jsp.setBounds(0, 100, 1000, 600);
         add(jsp);
+
+        //search button
+        search = new JButton("Search");
+        search.setBounds(20, 70, 80, 20);
+        add(search);
+
+        //print button
+        print  = new JButton("Print");
+        print.setBounds(120, 70, 80, 20);
+        add(print);
+
+        //add button
+        add = new JButton("Add");
+        add.setBounds(220, 70, 80, 20);
+        add(add);
+
+        //update button
+        update = new JButton("Update");
+        update.setBounds(320, 70, 80, 20);
+        add(update);
+
+        //cancel button 
+        cancel = new JButton("Cancel");
+        cancel.setBounds(420, 70, 80, 20);
+        add(cancel);
 
         
         setSize(1000,700);
