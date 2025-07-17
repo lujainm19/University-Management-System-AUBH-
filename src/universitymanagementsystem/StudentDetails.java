@@ -92,6 +92,15 @@ public class StudentDetails extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == search) {
+            //Query added for search button, which conditionally retrieves data based on stdID
+            String query = "select * from student where stdID ='"+ cstdIDno.getSelectedItem()+"'";
+            try {
+                Conn c = new Conn();
+                ResultSet rs = c.s.executeQuery(query);
+                table.setModel(DbUtils.resultSetToTableModel(rs));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         } else if (ae.getSource() == print) {
             //because print commands are an external entity
