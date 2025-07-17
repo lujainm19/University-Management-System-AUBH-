@@ -2,10 +2,11 @@ package universitymanagementsystem;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 import java.sql.*;
 import net.proteanit.sql.DbUtils;
 
-public class StudentDetails extends JFrame{
+public class StudentDetails extends JFrame implements ActionListener{
 
     Choice cstdIDno;
     JTable table;
@@ -54,32 +55,60 @@ public class StudentDetails extends JFrame{
         //search button
         search = new JButton("Search");
         search.setBounds(20, 70, 80, 20);
+        search.addActionListener(this);
         add(search);
 
         //print button
         print  = new JButton("Print");
         print.setBounds(120, 70, 80, 20);
+        print.addActionListener(this);
         add(print);
 
         //add button
         add = new JButton("Add");
         add.setBounds(220, 70, 80, 20);
+        add.addActionListener(this);
         add(add);
 
         //update button
         update = new JButton("Update");
         update.setBounds(320, 70, 80, 20);
+        update.addActionListener(this);
         add(update);
 
         //cancel button 
         cancel = new JButton("Cancel");
         cancel.setBounds(420, 70, 80, 20);
+        cancel.addActionListener(this);
         add(cancel);
 
         
         setSize(1000,700);
         setLocation(450,150);
         setVisible(true);
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == search) {
+
+        } else if (ae.getSource() == print) {
+            //because print commands are an external entity
+            try {
+                table.print(); //print table when print button clicked
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else if (ae.getSource() == add) {
+            setVisible(false);
+            new AddStudent(); //opens the AddStudent frame 
+        } else if (ae.getSource() == update) {
+            setVisible(false);
+           // new UpdateStudent(); //opens the UpdateStudent frame 
+        } else {
+            setVisible(false);
+        }
 
     }
 
