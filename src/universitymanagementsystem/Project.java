@@ -42,12 +42,14 @@ public class Project extends JFrame implements ActionListener{
         details.setForeground(Color.BLUE);
         mb.add(details);
 
-        JMenuItem facultydetails = new JMenuItem("View Faculty Information");
+        JMenuItem facultydetails = new JMenuItem("View Faculty Details");
         facultydetails.setBackground(Color.WHITE);
+        facultydetails.addActionListener(this);
         details.add(facultydetails);
 
-        JMenuItem studentdetails = new JMenuItem("View Student Information");
+        JMenuItem studentdetails = new JMenuItem("View Student Details");
         studentdetails.setBackground(Color.WHITE);
+        studentdetails.addActionListener(this);
         details.add(studentdetails);
         
 
@@ -152,6 +154,10 @@ public class Project extends JFrame implements ActionListener{
         new AddTeacher();  
     } else if (msg.equals("New Student Information")) {
         new AddStudent();
+    } else if (msg.equals("View Faculty Details")) {
+        new TeacherDetails();  
+    } else if (msg.equals("View Student Details")) {
+        new StudentDetails();
         }
     }
 
