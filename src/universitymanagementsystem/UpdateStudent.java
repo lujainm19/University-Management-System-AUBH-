@@ -3,25 +3,48 @@ package universitymanagementsystem;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.sql.*;
 
 public class UpdateStudent extends JFrame implements ActionListener{
 
     JTextField tfname, tffname, tfId, tfphone, tfemail, tfnationality;
     JComboBox<String> gender, type, college, enrollment, major, semester;
     JButton submit, cancel;
+    Choice cstdIDno;
 
     UpdateStudent(){
         //frame size, location and visibility
-        setSize(900, 700);
+        setSize(900, 650);
         setLocation(500, 200);
 
         setLayout(null);
         
         //New Student Details heading
-        JLabel heading = new JLabel("New Student Details");
-        heading.setBounds(310, 30, 500, 50);
-        heading.setFont(new Font("serif", Font.BOLD, 30));
+        JLabel heading = new JLabel("Update Student Details");
+        heading.setBounds(50, 10, 500, 50);
+        heading.setFont(new Font("Tahoma", Font.ITALIC, 35));
         add(heading);
+
+        //Search by Student ID heading
+        JLabel lblstdIDnumber = new JLabel("Select Student ID");
+        lblstdIDnumber.setBounds(50, 100, 200, 20);
+         lblstdIDnumber.setFont(new Font("serif", Font.PLAIN, 20));
+        add(lblstdIDnumber);
+
+        cstdIDno = new Choice();
+        cstdIDno.setBounds(250, 100, 200, 20);
+        add(cstdIDno);
+
+        try {
+            Conn c = new Conn();
+            ResultSet rs = c.s.executeQuery("select * from student");
+            while (rs.next()) {
+                cstdIDno.add(rs.getString("stdID"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         
         //Name: heading
         JLabel lblname = new JLabel("Name:");
