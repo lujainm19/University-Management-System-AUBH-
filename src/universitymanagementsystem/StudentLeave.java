@@ -3,10 +3,13 @@ package universitymanagementsystem;
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
+import com.toedter.calendar.JDateChooser;
+
 
 public class StudentLeave extends JFrame {
 
     Choice cstdIDno; 
+    JDateChooser dcdate;
 
     StudentLeave(){
 
@@ -40,6 +43,16 @@ public class StudentLeave extends JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        JLabel lbldate = new JLabel("Date");
+        lbldate.setBounds(60, 180, 200, 20);
+        lbldate.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(lbldate);
+
+        dcdate = new JDateChooser();
+        dcdate.setBounds(60, 210, 200, 30);
+        add(dcdate);
+
 
         setVisible(true);
 
