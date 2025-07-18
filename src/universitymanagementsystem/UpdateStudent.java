@@ -7,9 +7,9 @@ import java.sql.*;
 
 public class UpdateStudent extends JFrame implements ActionListener{
 
-    JTextField tfname, tffname, tfId, tfphone, tfemail, tfnationality;
+    JTextField tfphone, tfemail, tfnationality, tfgender;
     JComboBox<String> gender, type, college, enrollment, major, semester;
-    JButton submit, cancel;
+    JButton update, cancel;
     Choice cstdIDno;
 
     UpdateStudent(){
@@ -52,9 +52,9 @@ public class UpdateStudent extends JFrame implements ActionListener{
         lblname.setFont(new Font("serif", Font.BOLD, 20));
         add(lblname);
 
-        tfname = new JTextField();
-        tfname.setBounds(200, 150, 150, 30);
-        add(tfname);
+        JLabel labelname = new JLabel();
+        labelname.setBounds(200, 150, 150, 30);
+        add(labelname);
 
         //Father's Name: heading
         JLabel lblfname = new JLabel("Father's Name:");
@@ -62,9 +62,9 @@ public class UpdateStudent extends JFrame implements ActionListener{
         lblfname.setFont(new Font("serif", Font.BOLD, 20));
         add(lblfname);
 
-        tffname = new JTextField();
-        tffname.setBounds(600, 150, 150, 30);
-        add(tffname);
+        JLabel labelfname = new JLabel();
+        labelfname.setBounds(600, 150, 150, 30);
+        add(labelfname);
 
         //Student ID: heading
         JLabel lblId = new JLabel("Student ID:");
@@ -72,9 +72,9 @@ public class UpdateStudent extends JFrame implements ActionListener{
         lblId.setFont(new Font("serif", Font.BOLD, 20));
         add(lblId);
 
-        tfId = new JTextField();
-        tfId.setBounds(200, 200, 150, 30);
-        add(tfId);
+        JLabel labelId = new JLabel();
+        labelId.setBounds(200, 200, 150, 30);
+        add(labelId);
 
         //Phone No. : heading
         JLabel lblphone = new JLabel("Phone No. :");
@@ -86,15 +86,16 @@ public class UpdateStudent extends JFrame implements ActionListener{
         tfphone.setBounds(600, 200, 150, 30);
         add(tfphone);
 
-        //Student Email: heading
-        JLabel lblemail = new JLabel("Email:");
-        lblemail.setBounds(50, 250, 200, 30);
-        lblemail.setFont(new Font("serif", Font.BOLD, 20));
-        add(lblemail);
 
-        tfemail = new JTextField();
-        tfemail.setBounds(200, 250, 150, 30);
-        add(tfemail);
+        //Gender: heading
+        JLabel lblgender = new JLabel("Gender:");
+        lblgender.setBounds(50, 250, 200, 30);
+        lblgender.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblgender);
+
+        JLabel labelgender = new JLabel();
+        labelgender.setBounds(200, 250, 150, 30);
+        add(labelgender);
 
         //Nationality: heading
         JLabel lblnationality = new JLabel("Nationality:");
@@ -106,17 +107,16 @@ public class UpdateStudent extends JFrame implements ActionListener{
         tfnationality.setBounds(600, 250, 150, 30);
         add(tfnationality);
         
-        //Gender: heading
-        JLabel lblgender = new JLabel("Gender:");
-        lblgender.setBounds(50, 300, 200, 30);
-        lblgender.setFont(new Font("serif", Font.BOLD, 20));
-        add(lblgender);
+        
+        //Student Email: heading
+        JLabel lblemail = new JLabel("Email:");
+        lblemail.setBounds(50, 300, 200, 30);
+        lblemail.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblemail);
 
-        String gen[] = {"Male", "Female", "Prefer not to say"};
-        gender = new JComboBox<>(gen);
-        gender.setBounds(200, 300, 150, 30);
-        gender.setBackground(Color.WHITE);
-        add(gender);
+        tfemail = new JTextField();
+        tfemail.setBounds(200, 300, 150, 30);
+        add(tfemail);
 
         //Student Type: heading
         JLabel lbltype = new JLabel("Student Type:");
@@ -178,16 +178,16 @@ public class UpdateStudent extends JFrame implements ActionListener{
         semester.setBackground(Color.WHITE);
         add(semester);
 
-        submit = new JButton("Submit");
-        submit.setBounds(250,550,120,30);
-        submit.setBackground(Color.BLACK);
-        submit.setForeground(Color.WHITE);
-        submit.addActionListener(this);
-        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
-        add(submit);
+        update = new JButton("Update");
+        update.setBounds(250,500,120,30);
+        update.setBackground(Color.BLACK);
+        update.setForeground(Color.WHITE);
+        update.addActionListener(this);
+        update.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(update);
 
         cancel = new JButton("Cancel");
-        cancel.setBounds(450,550,120,30);
+        cancel.setBounds(450,500,120,30);
         cancel.setBackground(Color.BLACK);
         cancel.setForeground(Color.WHITE);
         cancel.addActionListener(this);
@@ -202,7 +202,7 @@ public class UpdateStudent extends JFrame implements ActionListener{
         @Override
     public void actionPerformed(ActionEvent ae) {
         //to eturn the exact component
-        if (ae.getSource() == submit ) {
+        if (ae.getSource() == update ) {
             String name = tfname.getText();
             String fname = tffname.getText();
             String stdID = tfId.getText();
