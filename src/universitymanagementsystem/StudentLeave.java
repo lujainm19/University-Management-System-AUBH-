@@ -92,8 +92,25 @@ public class StudentLeave extends JFrame implements ActionListener{
 
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == submit) {
+            //retrive values entered by user 
+            String stdIDno = cstdIDno.getSelectedItem();
+            String date = ((JTextField) dcdate.getDateEditor().getUiComponent()).getText();
+            String duration = ctime.getSelectedItem();
+
+            //query made to store values in studentleave table
+            String query = "insert into studentleave values('"+stdIDno+"', '"+date+"', '"+duration+"')";
+
+            try {
+                Conn c = new Conn();
+                c.s.executeUpdate(query); //INSERT, UPDATE, DELETE -> executeUpdate()  and SELECT -> executeQuery()
+                JOptionPane.showMessageDialog(null, "Leave Confirmed");
+                setVisible(false);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         } else {
+            //cancel clicked
             setVisible(false);
         }
     }
