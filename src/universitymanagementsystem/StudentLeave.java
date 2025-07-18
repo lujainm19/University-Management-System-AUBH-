@@ -8,7 +8,7 @@ import com.toedter.calendar.JDateChooser;
 
 public class StudentLeave extends JFrame {
 
-    Choice cstdIDno; 
+    Choice cstdIDno, ctime; 
     JDateChooser dcdate;
 
     StudentLeave(){
@@ -44,14 +44,26 @@ public class StudentLeave extends JFrame {
             e.printStackTrace();
         }
 
+        //Date Calendar
         JLabel lbldate = new JLabel("Date");
         lbldate.setBounds(60, 180, 200, 20);
         lbldate.setFont(new Font("Tahoma", Font.PLAIN, 18));
         add(lbldate);
 
         dcdate = new JDateChooser();
-        dcdate.setBounds(60, 210, 200, 30);
+        dcdate.setBounds(60, 210, 200, 20);
         add(dcdate);
+
+        JLabel lbltime = new JLabel("Time Duration");
+        lbltime.setBounds(60, 260, 200, 20);
+        lbltime.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(lbltime);
+
+        ctime = new Choice();
+        ctime.setBounds(60, 290, 200, 20);
+        ctime.add("Full day");
+        ctime.add("Half day");
+        add(ctime);
 
 
         setVisible(true);
