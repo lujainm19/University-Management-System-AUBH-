@@ -2,14 +2,16 @@ package universitymanagementsystem;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 import java.sql.*;
 import com.toedter.calendar.JDateChooser;
 
 
-public class StudentLeave extends JFrame {
+public class StudentLeave extends JFrame implements ActionListener{
 
     Choice cstdIDno, ctime; 
     JDateChooser dcdate;
+    JButton submit, cancel;
 
     StudentLeave(){
 
@@ -65,9 +67,35 @@ public class StudentLeave extends JFrame {
         ctime.add("Half day");
         add(ctime);
 
+        //submit button
+        submit = new JButton("Submit");
+        submit.setBounds(60,350,100,25);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
+        //cancel button 
+        cancel = new JButton("Cancel");
+        cancel.setBounds(200,350,100,25);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.addActionListener(this);
+        cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(cancel);
+
 
         setVisible(true);
 
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == submit) {
+
+        } else {
+            setVisible(false);
+        }
     }
 
     public static void main(String[] args) {
