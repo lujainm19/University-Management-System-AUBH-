@@ -51,9 +51,10 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         lblname.setFont(new Font("serif", Font.BOLD, 20));
         add(lblname);
 
-        tfname = new JTextField();
-        tfname.setBounds(200, 150, 150, 30);
-        add(tfname);
+        JLabel labelname = new JLabel();
+        labelname.setBounds(200, 150, 150, 30);
+        labelname.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelname);
 
         //Last Name: heading
         JLabel lbllname = new JLabel("Last Name:");
@@ -61,9 +62,10 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         lbllname.setFont(new Font("serif", Font.BOLD, 20));
         add(lbllname);
 
-        tflname = new JTextField();
-        tflname.setBounds(600, 150, 150, 30);
-        add(tflname);
+        JLabel labellname = new JLabel();
+        labellname.setBounds(600, 150, 150, 30);
+        labellname.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labellname);
 
         //Employee ID: heading
         JLabel lblId = new JLabel("Employee ID:");
@@ -71,9 +73,10 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         lblId.setFont(new Font("serif", Font.BOLD, 20));
         add(lblId);
 
-        tfId = new JTextField();
-        tfId.setBounds(200, 200, 150, 30);
-        add(tfId);
+        JLabel labelId = new JLabel();
+        labelId.setBounds(200, 200, 150, 30);
+        labelId.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelId);
 
         //Phone No. : heading
         JLabel lblphone = new JLabel("Phone No. :");
@@ -91,11 +94,10 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         lblgender.setFont(new Font("serif", Font.BOLD, 20));
         add(lblgender);
 
-        String gen[] = {"Male", "Female", "Prefer not to say"};
-        gender = new JComboBox<>(gen);
-        gender.setBounds(200, 250, 150, 30);
-        gender.setBackground(Color.WHITE);
-        add(gender);
+        JLabel labelgender = new JLabel();
+        labelgender.setBounds(200, 250, 150, 30);
+        labelgender.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(labelgender);
 
 
         //Nationality: heading
