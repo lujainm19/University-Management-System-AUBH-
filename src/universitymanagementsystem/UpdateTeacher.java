@@ -7,8 +7,7 @@ import java.sql.*;
 
 public class UpdateTeacher extends JFrame implements ActionListener{
 
-    JTextField tfname, tflname, tfId, tfphone, tfemail, tfnationality;
-    JComboBox<String> gender, des, college, emptp;
+    JTextField tfname, tflname, tfId, tfphone, tfemail, tfnationality, tfdes, tfcollege, tfemptp;
     JButton update, cancel;
     Choice cempIDno;
 
@@ -127,11 +126,9 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         lbldes.setFont(new Font("serif", Font.BOLD, 20));
         add(lbldes);
 
-        String d[] = {"Assistant Proffesor", "Lecturer"};
-        des = new JComboBox<>(d);
-        des.setBounds(600, 300, 150,30);
-        des.setBackground(Color.WHITE);
-        add(des);
+        tfdes = new JTextField();
+        tfdes.setBounds(600, 300, 150,30);
+        add(tfdes);
 
         //College Dept.:  heading
         JLabel lblcollege = new JLabel("College Dept. :");
@@ -139,11 +136,10 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         lblcollege.setFont(new Font("serif", Font.BOLD, 20));
         add(lblcollege);
 
-        String col[] = {"Arts & Sciences", "Business & Management", "Engineering & Computing", "Media & Design"};
-        college = new JComboBox<>(col);
-        college.setBounds(200, 350, 150, 30);
-        college.setBackground(Color.WHITE);
-        add(college);
+        tfcollege = new JTextField();
+        tfcollege.setBounds(200, 350, 150, 30);
+        tfcollege.setBackground(Color.WHITE);
+        add(tfcollege);
 
         //Employement Type: heading
         JLabel lblemptp = new JLabel("Employement Type:");
@@ -151,11 +147,9 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         lblemptp.setFont(new Font("serif", Font.BOLD, 20));
         add(lblemptp);
 
-        String emp[] = {"Full-time", "Part-time"};
-        emptp = new JComboBox<>(emp);
-        emptp.setBounds(600, 350, 150, 30);
-        emptp.setBackground(Color.WHITE);
-        add(emptp);
+        tfemptp = new JTextField();
+        tfemptp.setBounds(600, 350, 150, 30);
+        add(tfemptp);
 
        
 
@@ -182,18 +176,14 @@ public class UpdateTeacher extends JFrame implements ActionListener{
 
         @Override
     public void actionPerformed(ActionEvent ae) {
-        //to eturn the exact component
+        //to return the exact component
         if (ae.getSource() == update ) {
-            String name = tfname.getText();
-            String lname = tflname.getText();
-            String empID = tfId.getText();
             String phone = tfphone.getText();
             String email = tfemail.getText();
             String nationality = tfnationality.getText();
-            String gen = (String) gender.getSelectedItem();
-            String d = (String) des.getSelectedItem();
-            String col = (String) college.getSelectedItem();
-            String emp = (String) emptp.getSelectedItem();
+            String d = (String) tfdes.getText();
+            String col = (String) tfcollege.getText();
+            String emp = (String) tfemptp.getText();
     
             //cuz mysql is an external entity
             try {
