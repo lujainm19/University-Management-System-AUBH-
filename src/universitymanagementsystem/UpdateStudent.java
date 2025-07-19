@@ -28,7 +28,7 @@ public class UpdateStudent extends JFrame implements ActionListener{
         //Search by Student ID heading
         JLabel lblstdIDnumber = new JLabel("Select Student ID");
         lblstdIDnumber.setBounds(50, 100, 200, 20);
-         lblstdIDnumber.setFont(new Font("serif", Font.PLAIN, 20));
+        lblstdIDnumber.setFont(new Font("serif", Font.PLAIN, 20));
         add(lblstdIDnumber);
 
         cstdIDno = new Choice();
@@ -172,6 +172,19 @@ public class UpdateStudent extends JFrame implements ActionListener{
         lblsemester.setFont(new Font("serif", Font.BOLD, 20));
         add(lblsemester);
 
+        // to retrieve unchangeable data from student database and display it on the frame
+        try {
+            Conn c = new Conn();
+            String query = "select * from student where stdID ='"+cstdIDno.getSelectedItem()+"'";
+            ResultSet rs = c.s.executeQuery(query);
+            while(rs.next()) {
+                labelname.setText(rs.getString("name"));
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         String sem[] = {"1", "2", "3", "4", "5", "6", "7", "8", "other"};
         semester = new JComboBox<>(sem);
         semester.setBounds(600, 400, 150, 30);
@@ -201,7 +214,7 @@ public class UpdateStudent extends JFrame implements ActionListener{
 
         @Override
     public void actionPerformed(ActionEvent ae) {
-        //to eturn the exact component
+        //to return the exact component
         if (ae.getSource() == update ) {
             String name = tfname.getText();
             String fname = tffname.getText();
