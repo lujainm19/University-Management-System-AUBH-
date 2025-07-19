@@ -9,7 +9,7 @@ public class UpdateTeacher extends JFrame implements ActionListener{
 
     JTextField tfname, tflname, tfId, tfphone, tfemail, tfnationality;
     JComboBox<String> gender, des, college, emptp;
-    JButton submit, cancel;
+    JButton update, cancel;
     Choice cempIDno;
 
     UpdateTeacher(){
@@ -155,16 +155,16 @@ public class UpdateTeacher extends JFrame implements ActionListener{
 
        
 
-        submit = new JButton("Submit");
-        submit.setBounds(250,550,120,30);
-        submit.setBackground(Color.BLACK);
-        submit.setForeground(Color.WHITE);
-        submit.addActionListener(this);
-        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
-        add(submit);
+        update = new JButton("Update");
+        update.setBounds(250,500,120,30);
+        update.setBackground(Color.BLACK);
+        update.setForeground(Color.WHITE);
+        update.addActionListener(this);
+        update.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(update);
 
         cancel = new JButton("Cancel");
-        cancel.setBounds(450,550,120,30);
+        cancel.setBounds(450,500,120,30);
         cancel.setBackground(Color.BLACK);
         cancel.setForeground(Color.WHITE);
         cancel.addActionListener(this);
@@ -179,7 +179,7 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         @Override
     public void actionPerformed(ActionEvent ae) {
         //to eturn the exact component
-        if (ae.getSource() == submit ) {
+        if (ae.getSource() == update ) {
             String name = tfname.getText();
             String lname = tflname.getText();
             String empID = tfId.getText();
