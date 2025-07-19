@@ -7,8 +7,7 @@ import java.sql.*;
 
 public class UpdateStudent extends JFrame implements ActionListener{
 
-    JTextField tfphone, tfemail, tfnationality, tfgender;
-    JComboBox<String> gender, type, college, enrollment, major, semester;
+    JTextField tfphone, tfemail, tfnationality, tfgender, tftype, tfcollege, tfenrollment, tfmajor, tfsemester;
     JButton update, cancel;
     Choice cstdIDno;
 
@@ -124,23 +123,19 @@ public class UpdateStudent extends JFrame implements ActionListener{
         lbltype.setFont(new Font("serif", Font.BOLD, 20));
         add(lbltype);
 
-        String tp[] = {"Undergraduate", "Post-graduate", "Foundation"};
-        type = new JComboBox<>(tp);
-        type.setBounds(600, 300, 150,30);
-        type.setBackground(Color.WHITE);
-        add(type);
+        tftype = new JTextField();
+        tftype.setBounds(600, 300, 150,30);
+        add(tftype);
 
         //College Dept.:  heading
         JLabel lblcollege = new JLabel("College Dept. :");
         lblcollege.setBounds(50, 350, 200, 30);
         lblcollege.setFont(new Font("serif", Font.BOLD, 20));
         add(lblcollege);
-
-        String col[] = {"Arts & Sciences", "Business & Management", "Engineering & Computing", "Media & Design"};
-        college = new JComboBox<>(col);
-        college.setBounds(200, 350, 150, 30);
-        college.setBackground(Color.WHITE);
-        add(college);
+    
+        tfcollege = new JTextField();
+        tfcollege.setBounds(200, 350, 150, 30);
+        add(tfcollege);
 
         //Enrollmenent Status: heading
         JLabel lblenrollment = new JLabel("Enrollmenent Status:");
@@ -148,11 +143,9 @@ public class UpdateStudent extends JFrame implements ActionListener{
         lblenrollment.setFont(new Font("serif", Font.BOLD, 20));
         add(lblenrollment);
 
-        String enr[] = {"Full-time", "Part-time"};
-        enrollment = new JComboBox<>(enr);
-        enrollment.setBounds(600, 350, 150, 30);
-        enrollment.setBackground(Color.WHITE);
-        add(enrollment);
+        tfenrollment = new JTextField();
+        tfenrollment.setBounds(600, 350, 150, 30);
+        add(tfenrollment);
 
         //Major:  heading
         JLabel lblmajor = new JLabel("Major:");
@@ -160,17 +153,19 @@ public class UpdateStudent extends JFrame implements ActionListener{
         lblmajor.setFont(new Font("serif", Font.BOLD, 20));
         add(lblmajor);
 
-        String m[] = {"Arts & Sciences", "Digital Marketing", "Finance", "Human Resource Management", "Management", "MBA", "Civil Engineering", "Computer Engineering", "Computer Science", "Cybersecurity", "Industrial Engineering", "Mechanical Engineering", "Software Engineering", "Data Science & AI", "Engineering Management", "Multimedia Design"};
-        major = new JComboBox<>(m);
-        major.setBounds(200, 400, 150, 30);
-        major.setBackground(Color.WHITE);
-        add(major);
+        tfmajor = new JTextField();
+        tfmajor.setBounds(200, 400, 150, 30);
+        add(tfmajor);
 
         //Semester: heading
         JLabel lblsemester = new JLabel("Semester:");
         lblsemester.setBounds(400, 400, 200, 30);
         lblsemester.setFont(new Font("serif", Font.BOLD, 20));
         add(lblsemester);
+
+        tfsemester = new JTextField();
+        tfsemester.setBounds(600, 400, 150, 30);
+        add(tfsemester);
 
         // to retrieve unchangeable data from student database and display it on the frame
         try {
@@ -179,17 +174,22 @@ public class UpdateStudent extends JFrame implements ActionListener{
             ResultSet rs = c.s.executeQuery(query);
             while(rs.next()) {
                 labelname.setText(rs.getString("name"));
+                labelfname.setText(rs.getString("fname"));
+                labelId.setText(rs.getString("stdID"));
+                tfphone.setText(rs.getString("phone"));
+                labelgender.setText(rs.getString("gen"));
+                tfnationality.setText(rs.getString("nationality"));
+                tfemail.setText(rs.getString("email"));
+                tftype.setText(rs.getString("tp"));
+                tfcollege.setText(rs.getString("col"));
+                tfenrollment.setText(rs.getString("enr"));
+                tfmajor.setText(rs.getString("maj"));
+                tfsemester.setText(rs.getString("sem"));
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        String sem[] = {"1", "2", "3", "4", "5", "6", "7", "8", "other"};
-        semester = new JComboBox<>(sem);
-        semester.setBounds(600, 400, 150, 30);
-        semester.setBackground(Color.WHITE);
-        add(semester);
 
         update = new JButton("Update");
         update.setBounds(250,500,120,30);
