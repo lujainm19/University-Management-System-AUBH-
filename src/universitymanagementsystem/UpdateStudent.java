@@ -256,15 +256,17 @@ public class UpdateStudent extends JFrame implements ActionListener{
             String maj = (String) tfmajor.getText();
             String sem = (String) tfsemester.getText();
 
+            String stdID = (String) cstdIDno.getSelectedItem();
+
             //cuz mysql is an external entity
             try {
             // Build the query string
-            String query = "insert into student values('" + name + "','" + fname + "','" + stdID + "','" + phone + "','" + email + "','" + nationality + "','" + gen + "','" + tp + "','" + col + "','" + enr + "','" + maj + "','" + sem + "')";
+            String query = "update student set phone='" + phone + "', email='" + email + "', nationality='" + nationality + "', tp='" + tp + "', col='" + col + "', enr='" + enr + "', maj='" + maj + "', sem='" + sem + "' where stdID='" + stdID + "'";
 
             Conn con = new Conn();
             con.s.executeUpdate(query);
 
-            JOptionPane.showMessageDialog(null, "Student Details Inserted Successfully");
+            JOptionPane.showMessageDialog(null, "Student Details Updated Successfully");
             setVisible(false);
 
             } catch (Exception e) {
