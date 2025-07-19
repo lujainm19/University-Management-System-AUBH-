@@ -151,6 +151,28 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         tfemptp.setBounds(600, 350, 150, 30);
         add(tfemptp);
 
+
+        // to retrieve unchangeable data from student database and display it on the frame
+        try {
+            Conn c = new Conn();
+            String query = "select * from faculty where empID ='"+cempIDno.getSelectedItem()+"'";
+            ResultSet rs = c.s.executeQuery(query);
+            while(rs.next()) {
+                labelname.setText(rs.getString("name"));
+                labellname.setText(rs.getString("lname"));
+                labelId.setText(rs.getString("empID"));
+                tfphone.setText(rs.getString("phone"));
+                labelgender.setText(rs.getString("gen"));
+                tfnationality.setText(rs.getString("nationality"));
+                tfemail.setText(rs.getString("email"));
+                tfdes.setText(rs.getString("des"));
+                tfcollege.setText(rs.getString("col"));
+                tfemptp.setText(rs.getString("emp"));
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
        
 
         update = new JButton("Update");
