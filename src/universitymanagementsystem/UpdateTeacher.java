@@ -85,15 +85,18 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         tfphone.setBounds(600, 200, 150, 30);
         add(tfphone);
 
-        //Email: heading
-        JLabel lblemail = new JLabel("Email:");
-        lblemail.setBounds(50, 250, 200, 30);
-        lblemail.setFont(new Font("serif", Font.BOLD, 20));
-        add(lblemail);
+        //Gender: heading
+        JLabel lblgender = new JLabel("Gender:");
+        lblgender.setBounds(50, 250, 200, 30);
+        lblgender.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblgender);
 
-        tfemail = new JTextField();
-        tfemail.setBounds(200, 250, 150, 30);
-        add(tfemail);
+        String gen[] = {"Male", "Female", "Prefer not to say"};
+        gender = new JComboBox<>(gen);
+        gender.setBounds(200, 250, 150, 30);
+        gender.setBackground(Color.WHITE);
+        add(gender);
+
 
         //Nationality: heading
         JLabel lblnationality = new JLabel("Nationality:");
@@ -105,17 +108,16 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         tfnationality.setBounds(600, 250, 150, 30);
         add(tfnationality);
         
-        //Gender: heading
-        JLabel lblgender = new JLabel("Gender:");
-        lblgender.setBounds(50, 300, 200, 30);
-        lblgender.setFont(new Font("serif", Font.BOLD, 20));
-        add(lblgender);
 
-        String gen[] = {"Male", "Female", "Prefer not to say"};
-        gender = new JComboBox<>(gen);
-        gender.setBounds(200, 300, 150, 30);
-        gender.setBackground(Color.WHITE);
-        add(gender);
+        //Email: heading
+        JLabel lblemail = new JLabel("Email:");
+        lblemail.setBounds(50, 300, 200, 30);
+        lblemail.setFont(new Font("serif", Font.BOLD, 20));
+        add(lblemail);
+
+        tfemail = new JTextField();
+        tfemail.setBounds(200, 300, 150, 30);
+        add(tfemail);
 
         //Designation: heading
         JLabel lbldes = new JLabel("Designation: ");
