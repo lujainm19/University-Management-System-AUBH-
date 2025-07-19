@@ -53,6 +53,7 @@ public class UpdateStudent extends JFrame implements ActionListener{
 
         JLabel labelname = new JLabel();
         labelname.setBounds(200, 150, 150, 30);
+        labelname.setFont(new Font("Tahoma", Font.PLAIN, 18));
         add(labelname);
 
         //Father's Name: heading
@@ -63,6 +64,7 @@ public class UpdateStudent extends JFrame implements ActionListener{
 
         JLabel labelfname = new JLabel();
         labelfname.setBounds(600, 150, 150, 30);
+        labelfname.setFont(new Font("Tahoma", Font.PLAIN, 18));
         add(labelfname);
 
         //Student ID: heading
@@ -73,6 +75,7 @@ public class UpdateStudent extends JFrame implements ActionListener{
 
         JLabel labelId = new JLabel();
         labelId.setBounds(200, 200, 150, 30);
+        labelId.setFont(new Font("Tahoma", Font.PLAIN, 18));
         add(labelId);
 
         //Phone No. : heading
@@ -94,6 +97,7 @@ public class UpdateStudent extends JFrame implements ActionListener{
 
         JLabel labelgender = new JLabel();
         labelgender.setBounds(200, 250, 150, 30);
+        labelgender.setFont(new Font("Tahoma", Font.PLAIN, 18));
         add(labelgender);
 
         //Nationality: heading
