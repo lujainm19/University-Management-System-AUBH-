@@ -120,8 +120,8 @@ public class AddTeacher extends JFrame implements ActionListener{
         college.setBackground(Color.WHITE);
         add(college);
 
-        //Employement Type: heading
-        JLabel lblemptp = new JLabel("Employement Type:");
+        //Employment Type: heading
+        JLabel lblemptp = new JLabel("Employment Type:");
         lblemptp.setBounds(400, 350, 200, 30);
         lblemptp.setFont(new Font("serif", Font.BOLD, 20));
         add(lblemptp);
