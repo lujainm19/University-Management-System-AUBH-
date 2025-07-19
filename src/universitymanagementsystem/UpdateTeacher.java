@@ -10,19 +10,40 @@ public class UpdateTeacher extends JFrame implements ActionListener{
     JTextField tfname, tflname, tfId, tfphone, tfemail, tfnationality;
     JComboBox<String> gender, des, college, emptp;
     JButton submit, cancel;
+    Choice cempIDno;
 
     UpdateTeacher(){
         //frame size, location and visibility
-        setSize(900, 700);
+        setSize(900, 650);
         setLocation(500, 200);
 
         setLayout(null);
         
         //New Faculty Details heading
-        JLabel heading = new JLabel("New Faculty Details");
-        heading.setBounds(310, 30, 500, 50);
-        heading.setFont(new Font("serif", Font.BOLD, 30));
+        JLabel heading = new JLabel("Update Faculty Details");
+        heading.setBounds(50, 10, 500, 50);
+        heading.setFont(new Font("Tahoma", Font.ITALIC, 35));
         add(heading);
+
+        //Search by Faculty ID heading
+        JLabel lblempIDnumber = new JLabel("Select Faculty ID");
+        lblempIDnumber.setBounds(50, 100, 200, 20);
+        lblempIDnumber.setFont(new Font("serif", Font.PLAIN, 20));
+        add(lblempIDnumber);
+
+        cempIDno = new Choice();
+        cempIDno.setBounds(250, 100, 200, 20);
+        add(cempIDno);
+
+        try {
+            Conn c = new Conn();
+            ResultSet rs = c.s.executeQuery("select * from faculty");
+            while (rs.next()) {
+                cempIDno.add(rs.getString("empID"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         
         //Name: heading
         JLabel lblname = new JLabel("Name:");
