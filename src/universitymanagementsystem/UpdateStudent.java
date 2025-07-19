@@ -247,18 +247,14 @@ public class UpdateStudent extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         //to return the exact component
         if (ae.getSource() == update ) {
-            String name = tfname.getText();
-            String fname = tffname.getText();
-            String stdID = tfId.getText();
             String phone = tfphone.getText();
             String email = tfemail.getText();
             String nationality = tfnationality.getText();
-            String gen = (String) gender.getSelectedItem();
-            String tp = (String) type.getSelectedItem();
-            String col = (String) college.getSelectedItem();
-            String enr = (String) enrollment.getSelectedItem();
-            String maj = (String) major.getSelectedItem();
-            String sem = (String) semester.getSelectedItem();
+            String tp = (String) tftype.getText();
+            String col = (String) tfcollege.getText();
+            String enr = (String) tfenrollment.getText();
+            String maj = (String) tfmajor.getText();
+            String sem = (String) tfsemester.getText();
 
             //cuz mysql is an external entity
             try {
