@@ -195,6 +195,33 @@ public class UpdateStudent extends JFrame implements ActionListener{
             e.printStackTrace();
         }
 
+        cstdIDno.addItemListener(new ItemListener() { //When student ID in drop down changed for data to be changed
+            public void itemStateChanged(ItemEvent ie) {
+                try {
+            Conn c = new Conn();
+            String query = "select * from student where stdID ='"+cstdIDno.getSelectedItem()+"'";
+            ResultSet rs = c.s.executeQuery(query);
+            while(rs.next()) {
+                labelname.setText(rs.getString("name"));
+                labelfname.setText(rs.getString("fname"));
+                labelId.setText(rs.getString("stdID"));
+                tfphone.setText(rs.getString("phone"));
+                labelgender.setText(rs.getString("gen"));
+                tfnationality.setText(rs.getString("nationality"));
+                tfemail.setText(rs.getString("email"));
+                tftype.setText(rs.getString("tp"));
+                tfcollege.setText(rs.getString("col"));
+                tfenrollment.setText(rs.getString("enr"));
+                tfmajor.setText(rs.getString("maj"));
+                tfsemester.setText(rs.getString("sem"));
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+            }
+        });
+
         update = new JButton("Update");
         update.setBounds(250,500,120,30);
         update.setBackground(Color.BLACK);
