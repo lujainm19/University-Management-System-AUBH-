@@ -173,6 +173,31 @@ public class UpdateTeacher extends JFrame implements ActionListener{
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        cempIDno.addItemListener(new ItemListener() { //When student ID in drop down changed for data to be changed
+            public void itemStateChanged(ItemEvent ie) {
+                try {
+            Conn c = new Conn();
+            String query = "select * from faculty where empID ='"+cempIDno.getSelectedItem()+"'";
+            ResultSet rs = c.s.executeQuery(query);
+            while(rs.next()) {
+                labelname.setText(rs.getString("name"));
+                labellname.setText(rs.getString("lname"));
+                labelId.setText(rs.getString("empID"));
+                tfphone.setText(rs.getString("phone"));
+                labelgender.setText(rs.getString("gen"));
+                tfnationality.setText(rs.getString("nationality"));
+                tfemail.setText(rs.getString("email"));
+                tfdes.setText(rs.getString("des"));
+                tfcollege.setText(rs.getString("col"));
+                tfemptp.setText(rs.getString("emp"));
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+            }
+        });
        
 
         update = new JButton("Update");
