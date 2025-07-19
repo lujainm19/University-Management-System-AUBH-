@@ -165,7 +165,7 @@ public class UpdateTeacher extends JFrame implements ActionListener{
                 labelgender.setText(rs.getString("gen"));
                 tfnationality.setText(rs.getString("nationality"));
                 tfemail.setText(rs.getString("email"));
-                tfdes.setText(rs.getString("des"));
+                tfdes.setText(rs.getString("d"));
                 tfcollege.setText(rs.getString("col"));
                 tfemptp.setText(rs.getString("emp"));
             }
@@ -231,16 +231,20 @@ public class UpdateTeacher extends JFrame implements ActionListener{
             String d = (String) tfdes.getText();
             String col = (String) tfcollege.getText();
             String emp = (String) tfemptp.getText();
+
+            String empID = (String) cempIDno.getSelectedItem();
     
             //cuz mysql is an external entity
             try {
             // Build the query string
-            String query = "insert into faculty values('" + name + "','" + lname + "','" + empID + "','" + phone + "','" + email + "','" + nationality + "','" + gen + "','" + d + "','" + col + "','" + emp + "')";
+            String query = "UPDATE faculty SET phone='" + phone + "', email='" + email + "', nationality='" + nationality + "', d='" + d + "', col='" + col + "', emp='" + emp + "' WHERE empID='" + empID + "'";
+
+
 
             Conn con = new Conn();
             con.s.executeUpdate(query);
 
-            JOptionPane.showMessageDialog(null, "Faculty Details Inserted Successfully");
+            JOptionPane.showMessageDialog(null, "Faculty Details Updated Successfully");
             setVisible(false);
 
             } catch (Exception e) {
