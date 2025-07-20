@@ -61,6 +61,16 @@ public class EnterMarks extends JFrame{
         cbsemester.setBackground(Color.WHITE);
         add(cbsemester);
 
+        //Enter Course heading 
+        JLabel lblentercourse = new JLabel("Enter Course");
+        lblentercourse.setBounds(100, 150, 200, 40);
+        add(lblentercourse);
+
+        //Enter Marks heading 
+        JLabel lblentermarks = new JLabel("Enter Marks");
+        lblentermarks.setBounds(320, 150, 200, 40);
+        add(lblentermarks);
+
 
         setVisible(true);
 
