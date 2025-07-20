@@ -2,9 +2,10 @@ package universitymanagementsystem;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 import java.sql.*;
 
-public class EnterMarks extends JFrame{
+public class EnterMarks extends JFrame implements ActionListener{
 
     Choice cstdIDno;
     JComboBox cbsemester;
@@ -126,7 +127,7 @@ public class EnterMarks extends JFrame{
         submit.setBounds(100,450,150,30);
         submit.setBackground(Color.BLACK);
         submit.setForeground(Color.WHITE);
-        //submit.addActionListener(this);
+        submit.addActionListener(this);
         submit.setFont(new Font("Tahoma", Font.BOLD, 15));
         add(submit);
 
@@ -134,13 +135,22 @@ public class EnterMarks extends JFrame{
         cancel.setBounds(350,450,150,30);
         cancel.setBackground(Color.BLACK);
         cancel.setForeground(Color.WHITE);
-        //cancel.addActionListener(this);
+        cancel.addActionListener(this);
         cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
         add(cancel);
 
 
         setVisible(true);
 
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == submit) {
+
+        } else {
+            setVisible(false);
+        }
     }
 
 public static void main(String[] args) {
