@@ -8,6 +8,7 @@ public class EnterMarks extends JFrame{
 
     Choice cstdIDno;
     JComboBox cbsemester;
+    JTextField tfc1, tfc2, tfc3, tfc4, tfc5, tfc6, tfmarks1, tfmarks2, tfmarks3, tfmarks4, tfmarks5, tfmarks6;
 
     EnterMarks(){
 
@@ -63,13 +64,62 @@ public class EnterMarks extends JFrame{
 
         //Enter Course heading 
         JLabel lblentercourse = new JLabel("Enter Course");
-        lblentercourse.setBounds(100, 150, 200, 40);
+        lblentercourse.setBounds(130, 150, 200, 40);
         add(lblentercourse);
 
         //Enter Marks heading 
         JLabel lblentermarks = new JLabel("Enter Marks");
-        lblentermarks.setBounds(320, 150, 200, 40);
+        lblentermarks.setBounds(390, 150, 200, 40);
         add(lblentermarks);
+
+        tfc1 = new JTextField();
+        tfc1.setBounds(50, 200, 250, 20);
+        add(tfc1);
+
+        tfc2 = new JTextField();
+        tfc2.setBounds(50, 230, 250, 20);
+        add(tfc2);
+
+        tfc3 = new JTextField();
+        tfc3.setBounds(50, 260, 250, 20);
+        add(tfc3);
+
+        tfc4 = new JTextField();
+        tfc4.setBounds(50, 290, 250, 20);
+        add(tfc4);
+
+        tfc5 = new JTextField();
+        tfc5.setBounds(50, 320, 250, 20);
+        add(tfc5);
+
+        tfc6 = new JTextField();
+        tfc6.setBounds(50, 350, 250, 20);
+        add(tfc6);
+
+
+        tfmarks1 = new JTextField();
+        tfmarks1.setBounds(300, 200, 250, 20);
+        add(tfmarks1);
+
+        tfmarks2 = new JTextField();
+        tfmarks2.setBounds(300, 230, 250, 20);
+        add(tfmarks2);
+
+        tfmarks3 = new JTextField();
+        tfmarks3.setBounds(300, 260, 250, 20);
+        add(tfmarks3);
+
+        tfmarks4 = new JTextField();
+        tfmarks4.setBounds(300, 290, 250, 20);
+        add(tfmarks4);
+
+        tfmarks5 = new JTextField();
+        tfmarks5.setBounds(300, 320, 250, 20);
+        add(tfmarks5);
+
+        tfmarks6 = new JTextField();
+        tfmarks6.setBounds(300, 350, 250, 20);
+        add(tfmarks6);
 
 
         setVisible(true);
