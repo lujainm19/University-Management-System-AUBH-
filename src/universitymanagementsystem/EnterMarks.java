@@ -147,6 +147,20 @@ public class EnterMarks extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == submit) {
+            try {
+                Conn c = new Conn();
+
+                String query1 = "insert into courses values ('"+cstdIDno.getSelectedItem()+"', '"+cbsemester.getSelectedItem()+"', '"+tfc1.getText()+"', '"+tfc2.getText()+"', '"+tfc3.getText()+"', '"+tfc4.getText()+"', '"+tfc5.getText()+"', '"+tfc6.getText()+"')";
+                String query2 = "insert into marks values ('"+cstdIDno.getSelectedItem()+"', '"+cbsemester.getSelectedItem()+"', '"+tfmarks1.getText()+"', '"+tfmarks2.getText()+"', '"+tfmarks3.getText()+"', '"+tfmarks4.getText()+"', '"+tfmarks5.getText()+"', '"+tfmarks6.getText()+"')";
+
+                c.s.executeUpdate(query1);
+                c.s.executeUpdate(query2);
+
+                //Pop-up message
+                JOptionPane.showMessageDialog(null, "marks Inserted Successfully");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         } else {
             setVisible(false);
