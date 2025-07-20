@@ -9,6 +9,7 @@ public class EnterMarks extends JFrame{
     Choice cstdIDno;
     JComboBox cbsemester;
     JTextField tfc1, tfc2, tfc3, tfc4, tfc5, tfc6, tfmarks1, tfmarks2, tfmarks3, tfmarks4, tfmarks5, tfmarks6;
+    JButton cancel, submit;
 
     EnterMarks(){
 
@@ -120,6 +121,22 @@ public class EnterMarks extends JFrame{
         tfmarks6 = new JTextField();
         tfmarks6.setBounds(300, 350, 250, 20);
         add(tfmarks6);
+
+        submit = new JButton("Submit");
+        submit.setBounds(100,450,150,30);
+        submit.setBackground(Color.BLACK);
+        submit.setForeground(Color.WHITE);
+        //submit.addActionListener(this);
+        submit.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(submit);
+
+        cancel = new JButton("Back");
+        cancel.setBounds(350,450,150,30);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        //cancel.addActionListener(this);
+        cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        add(cancel);
 
 
         setVisible(true);
