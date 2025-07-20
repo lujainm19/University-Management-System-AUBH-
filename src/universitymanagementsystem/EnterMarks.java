@@ -6,6 +6,8 @@ import java.sql.*;
 
 public class EnterMarks extends JFrame{
 
+    Choice cstdIDno;
+
     EnterMarks(){
 
         setSize(1100, 600);
@@ -19,23 +21,22 @@ public class EnterMarks extends JFrame{
 		Image i2 = i1.getImage().getScaledInstance(400, 300, Image.SCALE_DEFAULT);
 		ImageIcon i3 = new ImageIcon(i2);
 		JLabel image = new JLabel(i3);
-        image.setBounds(570, 60, 450, 350);
+        image.setBounds(570, 70, 450, 350);
 		add(image);
 
-        //New Student Details heading
-        JLabel heading = new JLabel("Update Student Details");
-        heading.setBounds(50, 10, 500, 50);
-        heading.setFont(new Font("Tahoma", Font.ITALIC, 35));
+        //Enter Marks of Student heading
+        JLabel heading = new JLabel("Enter Marks of Student");
+        heading.setBounds(50, 0, 500, 50);
+        heading.setFont(new Font("Tahoma", Font.BOLD, 20));
         add(heading);
 
         //Search by Student ID heading
         JLabel lblstdIDnumber = new JLabel("Select Student ID");
-        lblstdIDnumber.setBounds(50, 100, 200, 20);
-        lblstdIDnumber.setFont(new Font("serif", Font.PLAIN, 20));
+        lblstdIDnumber.setBounds(50, 70, 150, 20);
         add(lblstdIDnumber);
 
         cstdIDno = new Choice();
-        cstdIDno.setBounds(250, 100, 200, 20);
+        cstdIDno.setBounds(200, 70, 150, 20);
         add(cstdIDno);
 
         try {
