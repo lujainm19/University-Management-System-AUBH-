@@ -1,9 +1,14 @@
 package universitymanagementsystem;
 
-public class ExaminationDetails {
+import javax.swing.*;
+
+public class ExaminationDetails  extends JFrame{
 
     ExaminationDetails() {
-        
+        setSize(1000, 550);
+        setLocation(450, 250);
+
+        setVisible(true);
     }
 
 
