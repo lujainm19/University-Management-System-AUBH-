@@ -50,6 +50,11 @@ public class ExaminationDetails  extends JFrame{
         table = new JTable();
         table.setFont(new Font("Tahoma", Font.PLAIN, 16));
 
+        //Scrollbar incase content too much to fit
+        JScrollPane jsp = new JScrollPane(table);
+        jsp.setBounds(0, 130, 1000, 310);
+        add(jsp);
+
         setVisible(true);
     }
 
