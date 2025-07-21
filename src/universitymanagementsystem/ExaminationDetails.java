@@ -2,6 +2,8 @@ package universitymanagementsystem;
 
 import javax.swing.*;
 import java.awt.*;
+import java.sql.*;
+import net.proteanit.sql.DbUtils;
 
 public class ExaminationDetails  extends JFrame{
 
@@ -54,6 +56,14 @@ public class ExaminationDetails  extends JFrame{
         JScrollPane jsp = new JScrollPane(table);
         jsp.setBounds(0, 130, 1000, 310);
         add(jsp);
+
+        try { //To get data from query, try catch added with connection to Conn class by object.
+            Conn c = new Conn();
+            ResultSet rs = c.s.executeQuery("select * from student");
+            table.setModel(DbUtils.resultSetToTableModel(rs));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         setVisible(true);
     }
