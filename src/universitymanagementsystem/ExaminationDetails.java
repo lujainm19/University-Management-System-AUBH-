@@ -7,6 +7,7 @@ public class ExaminationDetails  extends JFrame{
 
     JTextField search;
     JButton cancel, submit;
+    JTable table;
 
     ExaminationDetails() {
         setSize(1000, 550);
@@ -38,12 +39,16 @@ public class ExaminationDetails  extends JFrame{
         add(submit);
 
         cancel = new JButton("Back");
-        cancel.setBounds(440,90,150,30);
+        cancel.setBounds(480,90,150,30);
         cancel.setBackground(Color.BLACK);
         cancel.setForeground(Color.WHITE);
         //cancel.addActionListener(this);
         cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
         add(cancel);
+
+
+        table = new JTable();
+        table.setFont(new Font("Tahoma", Font.PLAIN, 16));
 
         setVisible(true);
     }
