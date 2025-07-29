@@ -28,7 +28,21 @@ public class Marks extends JFrame{
         subheading.setFont(new Font("Tahoma", Font.BOLD, 18));
         add(subheading);
 
+
+        //ID number heading
+        JLabel lblIDno = new JLabel("ID number" + IDno);
+        lblIDno.setBounds(60, 120, 500, 20);
+        lblIDno.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(lblIDno);
+
+        //semester heading 
+        JLabel lblsemester = new JLabel();
+        lblsemester.setBounds(60, 150, 500, 20);
+        lblsemester.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(lblsemester);
+
         setVisible(true);
+
 
     }
 
