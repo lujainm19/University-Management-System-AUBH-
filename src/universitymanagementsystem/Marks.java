@@ -41,6 +41,42 @@ public class Marks extends JFrame{
         lblsemester.setFont(new Font("Tahoma", Font.PLAIN, 18));
         add(lblsemester);
 
+        //sub1  
+        JLabel sub1 = new JLabel();
+        sub1.setBounds(60, 210, 500, 20);
+        sub1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(sub1);
+
+        //sub2  
+        JLabel sub2 = new JLabel();
+        sub2.setBounds(60, 240, 500, 20);
+        sub2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(sub2);
+
+        //sub3 
+        JLabel sub3 = new JLabel();
+        sub3.setBounds(60, 270, 500, 20);
+        sub3.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(sub3);
+
+        //sub4  
+        JLabel sub4 = new JLabel();
+        sub4.setBounds(60, 300, 500, 20);
+        sub4.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(sub4);
+
+        //sub5  
+        JLabel sub5 = new JLabel();
+        sub5.setBounds(60, 330, 500, 20);
+        sub5.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(sub5);
+
+        //sub6  
+        JLabel sub6 = new JLabel();
+        sub6.setBounds(60, 360, 500, 20);
+        sub6.setFont(new Font("Tahoma", Font.PLAIN, 18));
+        add(sub6);
+
         setVisible(true);
 
 
