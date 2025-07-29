@@ -79,7 +79,9 @@ public class ExaminationDetails  extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed (ActionEvent ae) {
-        if (ae.getSource() == submit) {
+        if (ae.getSource() == submit) { 
+            setVisible(false);
+            new Marks(search.getText());
 
         } else {
             setVisible(false);
