@@ -2,7 +2,7 @@ package universitymanagementsystem;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
+import java.awt.event.*;
 import java.sql.*;
 import net.proteanit.sql.DbUtils;
 
@@ -67,7 +67,11 @@ public class ExaminationDetails  extends JFrame{
         }
 
         table.addMouseListener(new MouseAdapter() {
-            
+            @Override
+            public void mouseClicked(MouseEvent me) {
+                int row = table.getSelectedRow();
+                search.setText(table.getModel().getValueAt(row, 2).toString());// retrives value from coloumn 3 (stdID)
+            }
         });
 
         setVisible(true);
