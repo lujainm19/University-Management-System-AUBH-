@@ -6,7 +6,7 @@ import java.awt.event.*;
 import java.sql.*;
 import net.proteanit.sql.DbUtils;
 
-public class ExaminationDetails  extends JFrame{
+public class ExaminationDetails  extends JFrame implements ActionListener{
 
     JTextField search;
     JButton cancel, submit;
@@ -37,7 +37,7 @@ public class ExaminationDetails  extends JFrame{
         submit.setBounds(300,90,150,30);
         submit.setBackground(Color.BLACK);
         submit.setForeground(Color.WHITE);
-        //submit.addActionListener(this);
+        submit.addActionListener(this);
         submit.setFont(new Font("Tahoma", Font.BOLD, 15));
         add(submit);
 
@@ -45,7 +45,7 @@ public class ExaminationDetails  extends JFrame{
         cancel.setBounds(480,90,150,30);
         cancel.setBackground(Color.BLACK);
         cancel.setForeground(Color.WHITE);
-        //cancel.addActionListener(this);
+        cancel.addActionListener(this);
         cancel.setFont(new Font("Tahoma", Font.BOLD, 15));
         add(cancel);
 
@@ -75,6 +75,15 @@ public class ExaminationDetails  extends JFrame{
         });
 
         setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed (ActionEvent ae) {
+        if (ae.getSource() == submit) {
+
+        } else {
+            setVisible(false);
+        }
     }
 
 
