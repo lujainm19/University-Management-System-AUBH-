@@ -15,6 +15,7 @@ The system aims to simplify administrative tasks such as adding, updating, and m
 - [ ] Add/Delete student records
 - [ ] Add/Delete faculty records
 - [ ] Course management
+- [ ] Fee management
 - [ ] Database schema (SQL file) for setup
 - [ ] Authentication & user roles (planned)
 
