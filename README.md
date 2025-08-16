@@ -25,7 +25,46 @@ The system aims to simplify administrative tasks such as adding, updating, and m
 - **JDBC** (Java Database Connectivity)
 - **Object-Oriented Programming (OOP)** principles
 
+
 ## 🚀 How to Run
 1. Clone this repository:
    ```bash
    git clone https://github.com/your-username/university-management-system.git
+
+2. Compile the Java files:
+   ```bash
+   javac -d bin src/universitymanagementsystem/*.java
+
+3. Run the program:
+   - For Students:
+   ```bash
+   java -cp bin universitymanagementsystem.UpdateStudent
+   ```
+   - For Teachers:
+   ```bash
+   java -cp bin universitymanagementsystem.UpdateTeacher
+   ```
+
+4. Set up the MySQL database:
+-  Install MySQL and create a database (e.g., universitydb).
+-  Import the provided SQL schema (to be added soon).
+-  Update the database connection settings in your `Conn.java` file.
+  
+
+📂 Project Structure
+```bash
+UniversityManagementSystem/
+├── src/universitymanagementsystem/
+│   ├── UpdateStudent.java
+│   ├── UpdateTeacher.java
+│   ├── Conn.java          # Database connection helper (MySQL + JDBC)
+│   └── ... (other files coming soon)
+├── README.md
+```
+
+
+
+
+
+
+
